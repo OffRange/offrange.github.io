@@ -10,11 +10,13 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import Aos from 'aos'
 import { LegalDisclosure } from './pages/LegalDisclosure'
+import $ from 'jquery'
 
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+    $('#project-info').addClass('d-none')
     setTimeout(function () {
       Aos.init({ duration: 600, easing: "ease", once: true })
       console.log("INIT")

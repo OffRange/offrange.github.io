@@ -16,7 +16,7 @@ function useDocumentTitle(title, prevailOnUnmount = false) {
   })
 }
 
-function useDownloadCounter(project, prevailOnUnmount = false) {
+function useProject(project, prevailOnUnmount = false) {
   const defaultTitle = useRef($('#downloads').text())
 
   useEffect(() => {
@@ -43,4 +43,4 @@ function useDownloadCounter(project, prevailOnUnmount = false) {
   })
 }
 
-export { useDocumentTitle, useDownloadCounter }
+export { useDocumentTitle, useProject }
