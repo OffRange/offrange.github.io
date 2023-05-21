@@ -23,7 +23,7 @@ export function Footer() {
                                     <p className="mb-0 text-body-secondary">Downloads: <span id="downloads"></span></p>
                                 </NavItem>
                                 <NavItem className="mb-2">
-                                    <NavLink id="latest-version" className="p-0 text-body-secondary">Latest version: <span className="underline"></span></NavLink>
+                                    <NavLink id="latest-version" href="/" className="p-0 text-body-secondary">Latest version: <span className="underline"></span></NavLink>
                                 </NavItem>
                                 <NavItem className="mb-2">
                                     <p className="mb-0 text-body-secondary">License: <span id="license"></span></p>
