@@ -16,6 +16,20 @@ export function Footer() {
                             </Link>
                             <p className="mb-3 mb-md-0 text-body-secondary">© {new Date().getFullYear()} OffRange</p>
                         </Col>
+                        <Col md="3" className="mb-3 d-none" id="project-info">
+                            <h5>Project information</h5>
+                            <Nav className="flex-column">
+                                <NavItem className="mb-2">
+                                    <p className="mb-0 text-body-secondary">Downloads: <span id="downloads"></span></p>
+                                </NavItem>
+                                <NavItem className="mb-2">
+                                    <NavLink id="latest-version" className="p-0 text-body-secondary">Latest version: <span className="underline"></span></NavLink>
+                                </NavItem>
+                                <NavItem className="mb-2">
+                                    <p className="mb-0 text-body-secondary">License: <span id="license"></span></p>
+                                </NavItem>
+                            </Nav>
+                        </Col>
                         <Col md="3" className="mb-3">
                             <h5>Links</h5>
                             <Nav className="flex-column">
