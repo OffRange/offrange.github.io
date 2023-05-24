@@ -3,8 +3,7 @@ import { Logo } from "../assets"
 import { Col, Container, Image, Nav, NavItem, NavLink, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
-export function Footer() {
-
+export function Footer({ projectInfo }) {
     return (
         <>
             <Container>
@@ -16,20 +15,25 @@ export function Footer() {
                             </Link>
                             <p className="mb-3 mb-md-0 text-body-secondary">© {new Date().getFullYear()} OffRange</p>
                         </Col>
-                        <Col md="3" className="mb-3 d-none" id="project-info">
-                            <h5>Project information</h5>
-                            <Nav className="flex-column">
-                                <NavItem className="mb-2">
-                                    <p className="mb-0 text-body-secondary">Downloads: <span id="downloads"></span></p>
-                                </NavItem>
-                                <NavItem className="mb-2">
-                                    <NavLink id="latest-version" href="/" className="p-0 text-body-secondary">Latest version: <span className="underline"></span></NavLink>
-                                </NavItem>
-                                <NavItem className="mb-2">
-                                    <p className="mb-0 text-body-secondary">License: <span id="license"></span></p>
-                                </NavItem>
-                            </Nav>
-                        </Col>
+                        {
+                            projectInfo && !(Object.keys(projectInfo).length === 0 && Object.getPrototypeOf(projectInfo) === Object.prototype) && <>
+                                <Col md="3" className="mb-3" id="project-info">
+                                    <h5>Project information</h5>
+                                    <Nav className="flex-column">
+                                        <NavItem className="mb-2">
+                                            <p className="mb-0 text-body-secondary">Downloads: {projectInfo.downloads.sum} [{projectInfo.downloads.latest}]</p>
+                                        </NavItem>
+                                        <NavItem className="mb-2">
+                                            <NavLink id="latest-version" href={projectInfo.latestVersion.url} className="p-0 text-body-secondary">Latest version: {projectInfo.latestVersion.tag}</NavLink>
+                                        </NavItem>
+                                        <NavItem className="mb-2">
+                                            <p className="mb-0 text-body-secondary">License: {projectInfo.license}</p>
+                                        </NavItem>
+                                    </Nav>
+                                </Col>
+                            </>
+                        }
+
                         <Col md="3" className="mb-3">
                             <h5>Links</h5>
                             <Nav className="flex-column">

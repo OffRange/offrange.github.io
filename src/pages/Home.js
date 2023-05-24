@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Col, Container, Image, ProgressBar, Row } from "react-bootstrap";
 import { Logo, PasswordManager } from "../assets";
 import moment from "moment/moment";
@@ -37,10 +37,13 @@ export function Home() {
             }
         })
     }
-    $(window).on('resize scroll', function () {
+
+    useEffect(() => {
         animateProgress()
-    });
-    $(animateProgress)
+        $(window).on('resize scroll', function () {
+            animateProgress()
+        });
+    })
 
 
     return (
