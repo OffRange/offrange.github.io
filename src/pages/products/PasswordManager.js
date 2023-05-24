@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import { Dashboard, Viewing } from "../../assets"
-import { useProject } from "../../useHelpers"
 import { useDocumentTitle } from "../../useHelpers"
 import { PageTitle } from "../../components/PageTitle"
 import { Card, Col, Container, Row } from "react-bootstrap"
@@ -38,7 +37,8 @@ export function PasswordManager({ setProjectName }) {
     useDocumentTitle("Products | Password Manager")
     useEffect(() => {
         setProjectName("PasswordManager")
-    }, []);
+    });
+
     return (
         <>
             <PageTitle title="Password Manager" description="Introducing this open-source password manager, a reliable solution built on the foundation of transparency and security. Powered by AES encryption, one of the most trusted encryption algorithms available, this password manager ensures your sensitive information remains confidential and protected." />

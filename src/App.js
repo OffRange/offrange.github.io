@@ -16,7 +16,7 @@ function App() {
   const [projectInfo, setProjectInfo] = useState()
   const [projectName, setProjectName] = useState()
   useEffect(() => {
-    if (projectName == undefined) {
+    if (projectName === undefined) {
       setProjectInfo()
       return
     }
