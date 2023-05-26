@@ -24,7 +24,7 @@ export function Footer({ projectInfo }) {
                                             <p className="mb-0 text-body-secondary">Downloads: {projectInfo.downloads.sum} [{projectInfo.downloads.latest}]</p>
                                         </NavItem>
                                         <NavItem className="mb-2">
-                                            <NavLink id="latest-version" href={projectInfo.latestVersion.url} className="p-0 text-body-secondary">Latest version: {projectInfo.latestVersion.tag}</NavLink>
+                                            <NavLink href={projectInfo.versions.releasesUrl} className="p-0 text-body-secondary">Latest version: {projectInfo.versions.latest.tag}</NavLink>
                                         </NavItem>
                                         <NavItem className="mb-2">
                                             <p className="mb-0 text-body-secondary">License: {projectInfo.license}</p>

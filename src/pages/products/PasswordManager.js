@@ -2,8 +2,8 @@ import React, { useEffect } from "react"
 import { Dashboard, Viewing } from "../../assets"
 import { useDocumentTitle } from "../../useHelpers"
 import { PageTitle } from "../../components/PageTitle"
-import { Card, Col, Container, Row } from "react-bootstrap"
-import { ArrowClockwise, ArrowRepeat, BracesAsterisk, CreditCardFill, DatabaseFillLock, DropletFill, Fingerprint, Github, LockFill, PatchCheckFill, PenFill } from "react-bootstrap-icons"
+import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap"
+import { ArrowClockwise, ArrowRepeat, BracesAsterisk, CreditCardFill, DatabaseFillLock, Download, DropletFill, Fingerprint, Github, LockFill, PatchCheckFill, PenFill } from "react-bootstrap-icons"
 import '../css/products.css'
 import { Link } from "react-router-dom"
 
@@ -33,7 +33,7 @@ function FeatureSmall(props) {
     )
 }
 
-export function PasswordManager({ setProjectName }) {
+export function PasswordManager({ setProjectName, projectInfo }) {
     useDocumentTitle("Products | Password Manager")
     useEffect(() => {
         setProjectName("PasswordManager")
@@ -41,7 +41,19 @@ export function PasswordManager({ setProjectName }) {
 
     return (
         <>
-            <PageTitle title="Password Manager" description="Introducing this open-source password manager, a reliable solution built on the foundation of transparency and security. Powered by AES encryption, one of the most trusted encryption algorithms available, this password manager ensures your sensitive information remains confidential and protected." />
+            <PageTitle title="Password Manager" description="Introducing this open-source password manager, a reliable solution built on the foundation of transparency and security. Powered by AES encryption, one of the most trusted encryption algorithms available, this password manager ensures your sensitive information remains confidential and protected.">
+                <Col className="d-flex flex-column gap-2 work-box">
+                    <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        {
+                            projectInfo && !(Object.keys(projectInfo).length === 0 && Object.getPrototypeOf(projectInfo) === Object.prototype) ?
+                                <Button href={projectInfo.versions.stable.url}><span><Download className="me-2" />Download {projectInfo.versions.stable.tag}</span></Button>
+                                :
+                                <Button disabled><Spinner animation="border" role="status" aria-hidden="true" size="sm" as="span" className="me-2" />Loading...</Button>
+                        }
+                        <Button href="https://github.com/OffRange/PasswordManager"><span><Github className="me-2" />View on GitHub</span></Button>
+                    </div>
+                </Col>
+            </PageTitle>
             <div className="b-divider"></div>
 
             <section>

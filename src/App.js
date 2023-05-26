@@ -22,10 +22,14 @@ function App() {
     }
     fetch(`https://api.github.com/repos/OffRange/${projectName}/releases`).then(res => res.json()).then(data => {
       var count = 0
+      let stable = {}
       for (var index in data) {
         count += data[index]["assets"][0]["download_count"]
+        if (!data[index]["prerelease"]) {
+          stable = { ...data[index]["assets"][0], index: index }
+        }
       }
-      return { downloads: { sum: count, latest: data[0]["assets"][0]["download_count"] }, latestVersion: { tag: data[0]["tag_name"], url: `https://github.com/OffRange/${projectName}/releases` } }
+      return { downloads: { sum: count, latest: data[0]["assets"][0]["download_count"] }, versions: { latest: { tag: data[0]["tag_name"], url: data[0]["assets"][0]["browser_download_url"] }, stable: { tag: data[stable["index"]]["tag_name"], url: stable["browser_download_url"] }, releasesUrl: `https://github.com/OffRange/${projectName}/releases` } }
     }).then(data => {
       fetch(`https://api.github.com/repos/OffRange/${projectName}`).then(res => res.json()).then(projectData => {
         setProjectInfo({ ...data, license: projectData['license']['name'] })
@@ -53,7 +57,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/products'>
           <Route index path='*' element={<Navigate to="/products/passwordmanager" replace />} />
-          <Route path='passwordmanager' element={<PasswordManager setProjectName={setProjectName} />} />
+          <Route path='passwordmanager' element={<PasswordManager setProjectName={setProjectName} projectInfo={projectInfo} />} />
         </Route>
         <Route path='/support-me' element={<Support />} />
         <Route path='/legal-disclosure' element={<LegalDisclosure />} />

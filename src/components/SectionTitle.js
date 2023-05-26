@@ -1,11 +1,11 @@
 import React from "react";
 
-export function SectionTitle(props) {
+export function SectionTitle({ title, description }) {
     return (
         <div className="section-title mb-3">
-            <h2>{props.title}</h2>
+            <h2>{title}</h2>
             <div className="line mb-4" />
-            <p>{props.description}</p>
+            <p>{description}</p>
         </div>
     )
 }
