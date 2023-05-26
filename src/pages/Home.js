@@ -194,12 +194,12 @@ export function Home() {
                                 <p><em>33. Grundschule (Elementary School), Dresden, Germany</em></p>
                             </div>
                         </Col>
-                        <Col lg="6">
+                        {/* <Col lg="6">
                             <h3 className="resume-title">Professional Experience</h3>
                             <div className="resume-item pb-0">
                                 <h4>Coming Soon</h4>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </section>
