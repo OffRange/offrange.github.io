@@ -2,7 +2,7 @@ import Header from './components/Header'
 import { Navigate, Route, Routes, useLocation } from "react-router-dom"
 import { Footer } from './components/Footer'
 import './App.css'
-import { PasswordManager } from './pages/products/PasswordManager'
+import { PasswordManager } from './pages/projects/PasswordManager'
 import { Support } from './pages/Support'
 import { Error404 } from './pages/404'
 import { Home } from './pages/Home'
@@ -40,7 +40,7 @@ function App() {
 
   const { pathname } = useLocation();
   useEffect(() => {
-    if (!pathname.startsWith('/products/')) {
+    if (!pathname.startsWith('/projects/')) {
       setProjectName()
     }
     window.scrollTo({ top: 0, left: 0, behavior: "instant" })
@@ -55,8 +55,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/products'>
-          <Route index path='*' element={<Navigate to="/products/passwordmanager" replace />} />
+        <Route path='/projects'>
+          <Route index path='*' element={<Navigate to="/projects/passwordmanager" replace />} />
           <Route path='passwordmanager' element={<PasswordManager setProjectName={setProjectName} projectInfo={projectInfo} />} />
         </Route>
         <Route path='/support-me' element={<Support />} />

@@ -41,7 +41,7 @@ export function Footer({ projectInfo }) {
                                     <NavLink href="/" className="p-0 text-body-secondary">Home</NavLink>
                                 </NavItem>
                                 <NavItem className="mb-2">
-                                    <NavLink href="#/products" className="p-0 text-body-secondary">Products</NavLink>
+                                    <NavLink href="#/projects" className="p-0 text-body-secondary">Projects</NavLink>
                                 </NavItem>
                                 <NavItem className="mb-2">
                                     <NavLink href="#/support-me" className="p-0 text-body-secondary">Support Me</NavLink>
