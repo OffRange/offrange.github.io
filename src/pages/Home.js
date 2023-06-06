@@ -216,7 +216,7 @@ export function Home() {
                             <p className="text-body-secondary text-justify">An open-source password manager that uses AES encryption to securely store passwords and credit card information locally on the device.</p>
 
                             <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                                <Button href="#/products/passwordmanager"><span><InfoCircleFill className="me-2" />View Product Page</span></Button>
+                                <Button href="#/projects/passwordmanager"><span><InfoCircleFill className="me-2" />View Project's Page</span></Button>
                                 <Button href="https://github.com/OffRange/PasswordManager"><span><Github className="me-2" />View on GitHub</span></Button>
                             </div>
                         </Col>
