@@ -161,6 +161,6 @@ section {
     transition: 0.9s;
 }
 
-.progress.zero .progress-bar {
+.progress.zero>.progress-bar {
     width: 0% !important;
 }

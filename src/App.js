@@ -10,6 +10,7 @@ import 'aos/dist/aos.css'
 import { useEffect, useState } from 'react'
 import Aos from 'aos'
 import { LegalDisclosure } from './pages/LegalDisclosure'
+import { PassStrengthAI } from './pages/projects/PassStrengthAI'
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
         <Route path='/projects'>
           <Route index path='*' element={<Navigate to="/projects/passwordmanager" replace />} />
           <Route path='passwordmanager' element={<PasswordManager setProjectName={setProjectName} projectInfo={projectInfo} />} />
+          <Route path='pass-strength-ai' element={<PassStrengthAI setProjectName={setProjectName} projectInfo={projectInfo} />} />
         </Route>
         <Route path='/support-me' element={<Support />} />
         <Route path='/legal-disclosure' element={<LegalDisclosure />} />

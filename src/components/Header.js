@@ -24,6 +24,9 @@ class Header extends Component {
                     <NavLink to="/projects/passwordmanager" className='nav-link'>Password Manager</NavLink>
                   </NavItem>
                   <NavItem>
+                    <NavLink to="/projects/pass-strength-ai" className='nav-link'>Password Strength AI</NavLink>
+                  </NavItem>
+                  <NavItem>
                     <NavLink to="/support-me" className='nav-link'>Support Me</NavLink>
                   </NavItem>
                 </Nav>

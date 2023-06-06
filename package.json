@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://offrange.github.io",
   "dependencies": {
+    "@tensorflow/tfjs": "^4.6.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^13.5.0",
