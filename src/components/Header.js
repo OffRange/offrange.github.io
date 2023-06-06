@@ -10,7 +10,7 @@ class Header extends Component {
         <Container>
           <Navbar bg="body-tertiary" variant="dark" expand='lg' className="rounded" >
             <Container>
-              <Navbar.Brand className="d-flex align-items-center">
+              <Navbar.Brand href="/" className="d-flex align-items-center">
                 <Image alt="Logo" src={Logo} className="rounded-circle me-2 mx-auto d-block" fluid width="32" height="32" />
                 <span className="fs-4">OffRange</span>
               </Navbar.Brand>
