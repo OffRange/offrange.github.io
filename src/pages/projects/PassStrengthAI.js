@@ -100,7 +100,7 @@ export function PassStrengthAI({ setProjectName, projectInfo }) {
                 <Container>
                     <h2 className="pb-2 border-bottom border-primary">Try it yourself!</h2>
                     <div data-aos="fade-left">
-                        <p className="text-warning">Processing speed may vary from device to device as the model calculates the result in your browser and not on the backend!</p>
+                        <p className="text-warning lead">Processing speed may vary from device to device as the model calculates the result in your browser and not on the backend!</p>
 
                         <InputGroup size="lg" className="pb-5 pt-5">
                             <InputGroup.Text><Asterisk /></InputGroup.Text>
@@ -121,6 +121,7 @@ export function PassStrengthAI({ setProjectName, projectInfo }) {
                                 </div>
                             </Col>
                         </InputGroup>
+                        <p className="text-secondary">Please note that the project is currently in beta, and while the models strive to provide accurate results, there is a possibility of producing inaccurate estimations.</p>
                     </div>
                 </Container>
             </section>
