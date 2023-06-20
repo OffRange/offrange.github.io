@@ -24,12 +24,8 @@ function App() {
     var jsonData = {}
     fetch(`https://api.github.com/repos/OffRange/${projectName}/releases`).then(res => res.json()).then(data => {
       var count = 0
-      let stable = {}
       for (var index in data) {
         count += data[index]["assets"][0]["download_count"]
-        if (!data[index]["prerelease"]) {
-          stable = { ...data[index]["assets"][0], index: index }
-        }
       }
       jsonData = { downloads: { sum: count, latest: data[0]["assets"][0]["download_count"] }, versions: { latest: { tag: data[0]["tag_name"], url: data[0]["assets"][0]["browser_download_url"] }, releasesUrl: `https://github.com/OffRange/${projectName}/releases` } }
 
