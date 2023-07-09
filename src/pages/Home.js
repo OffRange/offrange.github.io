@@ -19,7 +19,7 @@ export function Home() {
     const cSharpSkill = 90
     const pythonSkill = 85
 
-    useDocumentTitle("Home | OffRange")
+    useDocumentTitle("Davis Wolfermann - OffRange | Home")
 
     $.fn.isInViewport = function () {
         var elementTop = $(this).offset().top;
