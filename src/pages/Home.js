@@ -4,7 +4,7 @@ import { Logo, PasswordManager } from "../assets";
 import moment from "moment/moment";
 import { Android, ChevronRight, Cpu, Github, InfoCircleFill, Windows } from 'react-bootstrap-icons'
 import { Link } from "react-router-dom";
-import { useDocumentTitle } from "../useHelpers";
+//import { useDocumentTitle } from "../useHelpers";
 import { SectionTitle } from "../components/SectionTitle";
 import $ from 'jquery';
 import './css/home.css'
