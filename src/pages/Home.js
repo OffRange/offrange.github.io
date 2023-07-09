@@ -8,6 +8,7 @@ import { useDocumentTitle } from "../useHelpers";
 import { SectionTitle } from "../components/SectionTitle";
 import $ from 'jquery';
 import './css/home.css'
+import { Helmet } from "react-helmet";
 
 
 export function Home() {
@@ -19,7 +20,7 @@ export function Home() {
     const cSharpSkill = 90
     const pythonSkill = 85
 
-    useDocumentTitle("Davis Wolfermann - OffRange | Home")
+    //useDocumentTitle("")
 
     $.fn.isInViewport = function () {
         var elementTop = $(this).offset().top;
@@ -48,6 +49,9 @@ export function Home() {
 
     return (
         <>
+            <Helmet>
+                <title>Davis Wolfermann - OffRange | Home</title>
+            </Helmet>
             <section className="about">
                 <Container className="shadow p-5">
                     <Row>
