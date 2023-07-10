@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59e0d7e3.css",
+    "main.js": "/static/js/main.d55ad2f5.js",
+    "static/js/522.26f40a54.chunk.js": "/static/js/522.26f40a54.chunk.js",
+    "static/media/galaxy.webp": "/static/media/galaxy.9605b861fc2a58375f90.webp",
+    "static/media/logo.webp": "/static/media/logo.3b136985942122f01ab0.webp",
+    "static/media/Dashboard.webp": "/static/media/Dashboard.a5066cd5c2f4953302c1.webp",
+    "static/media/passwordmanager.webp": "/static/media/passwordmanager.ee496a3e36a84b827e86.webp",
+    "static/media/Viewing.webp": "/static/media/Viewing.b0e8f0c3aba1f7493b71.webp",
+    "static/media/btc.webp": "/static/media/btc.c42ff93bcea75627b22b.webp",
+    "static/media/paypal.webp": "/static/media/paypal.0b56e39c3374343e18aa.webp",
+    "static/media/kofi.webp": "/static/media/kofi.1893d0971a7a887d1e93.webp",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.59e0d7e3.css",
+    "static/js/main.d55ad2f5.js"
+  ]
+}
