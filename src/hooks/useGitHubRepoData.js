@@ -23,7 +23,7 @@ const useGitHubRepoData = (repoName) => {
                     const repoResponse = await fetch(`https://api.github.com/repos/OffRange/${repoName}`);
                     const repoData = await repoResponse.json();
                     const releasesResponse = await fetch(`https://api.github.com/repos/OffRange/${repoName}/releases`);
-                    const releasesData = (await releasesResponse.json()).sort((a, b) => new Date(a.published_at) - new Date(b.published_at));
+                    const releasesData = (await releasesResponse.json()).sort((a, b) => new Date(a.published_at) + new Date(b.published_at));
 
                     if (isMounted) {
                         const newData = {
