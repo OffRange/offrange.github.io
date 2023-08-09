@@ -60,9 +60,17 @@ export const getAssetDownloadCount = (projectData) => {
     let totalDownloadCount = 0;
 
     projectData.releases.all.forEach((release) => {
-        release.assets.forEach((asset) => {
-            totalDownloadCount += asset.download_count;
-        });
+        totalDownloadCount += getReleaseDownloadCount(release);
+    });
+
+    return totalDownloadCount;
+};
+
+export const getReleaseDownloadCount = (release) => {
+    let totalDownloadCount = 0;
+
+    release.assets.forEach((asset) => {
+        totalDownloadCount += asset.download_count;
     });
 
     return totalDownloadCount;

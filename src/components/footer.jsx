@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Nav, NavItem, NavLink, Row } from "react-bootstrap";
-import { getAssetDownloadCount } from "hooks/useGitHubRepoData";
+import { getAssetDownloadCount, getReleaseDownloadCount } from "hooks/useGitHubRepoData";
 import { StaticImage } from "gatsby-plugin-image";
 
 const ProjectInfo = ({ projectData, privacy }) => {
@@ -10,7 +10,7 @@ const ProjectInfo = ({ projectData, privacy }) => {
             <h5>Project information</h5>
             <Nav className="flex-column">
                 <NavItem className="mb-2">
-                    <p className="mb-0 text-body-secondary">Downloads: {getAssetDownloadCount(projectData)} [Latest: {projectData.releases.all[0].assets[0].download_count}]</p>
+                    <p className="mb-0 text-body-secondary">Downloads: {getAssetDownloadCount(projectData)} [Latest: {getReleaseDownloadCount(projectData.releases.all[0])}]</p>
                 </NavItem>
                 <NavItem className="mb-2">
                     <NavLink href={`${projectData.html_url}/releases`} className="p-0 text-body-secondary">Latest version: {projectData.releases.all[0].tag_name}</NavLink>
