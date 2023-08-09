@@ -278,7 +278,7 @@ export default PasswordManager
 
 export const query = graphql`
 query {
-    allFile(filter: {relativeDirectory: {eq: "keygo"}}) {
+    allFile(filter: {relativeDirectory: {eq: "keygo"}}, sort: {name: ASC}) {
       nodes {
         childImageSharp {
             gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
