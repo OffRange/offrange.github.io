@@ -272,7 +272,7 @@ const PasswordManager = ({ data }) => {
 
 export const Head = () => <SearchEngineOptimization title={"KeyGo - Digital Vault"}
     description={"Explore my open-source password manager, prioritizing transparency and security. With powerful AES encryption, your sensitive information remains confidential and protected. Discover the trusted solution for secure password management."}
-    keywords={"password manager, open-source, data privacy, password generator, online security, aes encryption, password security, digital vault, digital data management, offrange"} />
+    keywords={"password manager, KeyGo, KeyGo - Digital Vault, open-source, data privacy, password generator, online security, aes encryption, password security, digital vault, digital data management, offrange"} />
 
 export default PasswordManager
 
