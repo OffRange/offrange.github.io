@@ -3,6 +3,7 @@ import React from "react";
 import { Col, Container, Nav, NavItem, NavLink, Row } from "react-bootstrap";
 import { getAssetDownloadCount, getReleaseDownloadCount } from "hooks/useGitHubRepoData";
 import { StaticImage } from "gatsby-plugin-image";
+import { Github } from "react-bootstrap-icons";
 
 const ProjectInfo = ({ projectData, privacy }) => {
     return (
@@ -30,7 +31,13 @@ const ProjectInfo = ({ projectData, privacy }) => {
     )
 }
 
-const Footer = ({ projectData, privacy }) => {
+const Footer = ({ projectData, privacy, socialMedias = [] }) => {
+    socialMedias = [
+        {
+            href: (projectData && projectData.html_url) ?? "https://github.com/OffRange",
+            icon: <Github width={24} height={24} />
+        }, ...socialMedias
+    ]
     return (
         <Container>
             <footer className=" py-5 my-5 border-top">
@@ -61,6 +68,19 @@ const Footer = ({ projectData, privacy }) => {
                             </NavItem>
                         </Nav>
                     </Col>
+                    <div className="d-flex flex-column flex-sm-row justify-content-end py-4 my-4">
+                        <ul className="list-unstyled d-flex">
+                            {
+                                socialMedias.map((media, i) => (
+                                    <li className="ms-3" key={i}>
+                                        <a className="link-body-emphasis" href={media.href}>
+                                            {media.icon}
+                                        </a>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
                 </Row>
             </footer>
         </Container>

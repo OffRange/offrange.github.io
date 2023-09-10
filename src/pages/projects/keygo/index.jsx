@@ -4,7 +4,7 @@ import SearchEngineOptimization from "components/seo";
 import useGitHubRepoData from "hooks/useGitHubRepoData";
 import React, { useEffect, useRef, useState } from "react";
 import { Button, CloseButton, Col, Container, Row, Toast, ToastBody, ToastHeader } from "react-bootstrap";
-import { ArrowClockwise, ArrowRepeat, BracesAsterisk, ChevronLeft, ChevronRight, CreditCardFill, DatabaseFillLock, DropletFill, Fingerprint, Github, LockFill, PenFill } from "react-bootstrap-icons";
+import { ArrowClockwise, ArrowRepeat, BracesAsterisk, ChevronLeft, ChevronRight, CreditCardFill, DatabaseFillLock, DropletFill, Fingerprint, Github, GooglePlay, LockFill, PenFill } from "react-bootstrap-icons";
 import { CommonPageTitle } from "components/pageTitles";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
@@ -136,8 +136,15 @@ const PasswordManager = ({ data }) => {
         }
     }
 
+    const medias = [
+        {
+            href: "https://play.google.com/store/apps/details?id=de.davis.passwordmanager",
+            icon: <GooglePlay height={24} width={24} />
+        }
+    ]
+
     return (
-        <Layout projectData={projectData} privacy>
+        <Layout projectData={projectData} privacy socialMedias={medias}>
             <CommonPageTitle title={"KeyGo - Digital Vault"} description={projectData.description} >
                 <Col className="d-flex flex-column gap-2 work-box">
                     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center">
