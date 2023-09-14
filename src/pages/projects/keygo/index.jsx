@@ -148,11 +148,14 @@ const PasswordManager = ({ data }) => {
             <CommonPageTitle title={"KeyGo - Digital Vault"} description={projectData.description} >
                 <Col className="d-flex flex-column gap-2 work-box">
                     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center">
-                        <div style={{ maxWidth: "183px" }}>
-                            <a href='https://play.google.com/store/apps/details?id=de.davis.passwordmanager&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                                <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' className="w-100" />
-                            </a>
+                        <div className="d-flex justify-content-center">
+                            <div style={{ maxWidth: "183px" }} >
+                                <a href='https://play.google.com/store/apps/details?id=de.davis.passwordmanager&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                                    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' className="w-100" />
+                                </a>
+                            </div>
                         </div>
+
                         <StatusButtonDownload text="Download stable APK" projectData={projectData} loading={loading} error={error} />
                         <Button href={"https://github.com/OffRange/PasswordManager"}><span><Github className="me-2" />View on GitHub</span></Button>
                     </div>
