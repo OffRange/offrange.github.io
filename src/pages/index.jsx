@@ -14,7 +14,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const aboutMe = [
   { title: 'Name', content: 'Davis Alessandro Wolfermann' },
   { title: 'E-Mail', content: 'davis-wolfermann2005@gmx.de' },
-  { title: 'Name', content: `23 July 2005 (${new Date(Date.now() - new Date("07/23/2005")).getUTCFullYear() - 1970})` },
+  { title: 'Birthday', content: `23 July 2005 (${new Date(Date.now() - new Date("07/23/2005")).getUTCFullYear() - 1970})` },
   { title: 'GitHub', content: <a href="https://github.com/OffRange" className="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">@OffRange</a> },
   { title: 'Degree', content: 'High School Student' },
   { title: 'Country', content: 'Germany' },
