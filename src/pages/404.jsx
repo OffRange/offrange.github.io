@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import Layout from "components/layout"
 import { Button, Col, Container, Row } from "react-bootstrap"
 import Header from "components/header"
 
