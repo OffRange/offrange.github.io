@@ -9,6 +9,7 @@ const items = [
     { link: "/", text: "Home" },
     { link: "/projects/keygo", text: "Password Manager" },
     { link: "/projects/password-strength-ai", text: "Password Strength AI" },
+    { link: "/projects/power-control", text: "Power Control" },
 ]
 
 const Header = () => {
