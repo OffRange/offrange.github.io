@@ -23,7 +23,7 @@ const StatusButton = ({ loading, error, children }) => {
 const StatusButtonDownload = ({ text = "Download stable", projectData, loading, error }) => {
   return (
     <StatusButton loading={loading} error={error}>
-      <Button href={projectData.releases?.stable.assets[0].browser_download_url}><span><Download className="me-2" />{text} [{projectData.releases?.stable.tag_name}]</span></Button>
+      <Button href={projectData?.releases?.stable.assets[0].browser_download_url}><span><Download className="me-2" />{text} [{projectData?.releases?.stable.tag_name}]</span></Button>
     </StatusButton>
   )
 }
